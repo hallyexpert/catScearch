@@ -1,0 +1,51 @@
+.control-me::after {
+
+}
+#toggle:checked ~ .control-me::after {
+content: " 𓃠 ";
+font-size: 100px;
+color:#000000;
+}
+
+label {
+background: #ff85f8;
+padding: 20px 30px;
+border-radius: 5rem;
+}
+
+.visually-hidden {
+    position:absolute;
+    left: -100vw;
+}
+
+
+/* Note, you may want to position the checkbox over top the label and set the opacity to zero instead. It can be better for accessibilty on some touch devices for discoverability. */
+
+
+body {
+    height: 100vh;
+    /*margin: 0;*/
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font: 800 30px/1.2 -system-ui, sans-serif;
+
+    /*background-color: #bfe2e9;*/
+}
+#myDIV {
+    height:5vh;
+    width: 5vh;
+    z-index: -1;
+    /*background: #ff0000;*/
+    animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+    from {
+        background-color: #070707;
+    }
+    to {
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+}
